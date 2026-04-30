@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IICT - Our Services | Innovative IT Solutions & Technology Services Nigeria</title>
+    <meta name="description" content="Explore IICT's comprehensive IT services including Satellite Communications, VPN/WAN, Microwave Links, CCTV Security, Biometric Access Control, and professional ICT training.">
+    <meta name="keywords" content="IT services Nigeria, satellite communications, VSAT, network security, CCTV, biometric access control, ICT training">
+    
+    <!-- Favicon -->
+   <link rel="icon" type="image/jpeg" href="/Images/logo.jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-glow: rgba(37, 99, 235, 0.2);
+            --secondary: #0f172a;
+            --secondary-light: #1e293b;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --gradient-glow: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --shadow-primary: 0 10px 30px rgba(37, 99, 235, 0.2);
+            --border-radius-sm: 12px;
+            --border-radius-md: 20px;
+            --border-radius-lg: 30px;
+            --border-radius-xl: 50px;
+            --transition-fast: 0.2s ease;
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            background-color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--secondary);
+            margin: 0 0.25rem;
+            transition: all var(--transition-base);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+            padding: 180px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 60%;
+            height: 120%;
+            background: var(--gradient-glow);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--primary-dark);
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            color: var(--primary);
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            transition: all var(--transition-base);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform var(--transition-base);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-base);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gradient-primary);
+        }
+
+        .service-card:hover .service-icon i {
+            color: white !important;
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+            transition: all var(--transition-base);
+        }
+
+        .service-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .service-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            transition: all var(--transition-base);
+        }
+
+        .service-link:hover {
+            gap: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .image-showcase {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-base);
+        }
+
+        .image-showcase:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .image-showcase img {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-slow);
+        }
+
+        .image-showcase:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-section {
+            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+        }
+
+        .footer {
+            background: var(--secondary);
+            color: var(--gray-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer h5 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: all var(--transition-base);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            z-index: 1000;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+            
+            .page-header {
+                padding: 140px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+         .logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+           <img src="/Images/logo.jpeg" alt="IICT Logo" class="logo-img"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary-custom">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1>Our Services</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Building Image Showcase -->
+    <section>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="image-showcase">
+                        <img src="/Images/building.jpg" alt="IICT Headquarters" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="section-badge">Our Facility</span>
+                    <h2>State-of-the-Art ICT Infrastructure</h2>
+                    <p class="text-muted">Located at the heart of Ibadan, our facility houses cutting-edge equipment and technology to deliver world-class ICT solutions across Nigeria.</p>
+                    <ul class="feature-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Modern Equipment & Tools</li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Expert Technical Team</li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> 24/7 Support Center</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mixer Equipment Showcase -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="section-badge">Our Equipment</span>
+                <h2>Professional Audio & Communication Equipment</h2>
+                <p>We use only the highest quality equipment for all our installations</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="image-showcase">
+                        <img src="/Images/mixer1.jpg" alt="Professional Audio Mixer" class="img-fluid">
+                    </div>
+                    <div class="mt-3 text-center">
+                        <h5>Professional Audio Mixing Console</h5>
+                        <p class="text-muted">High-quality audio equipment for clear communication</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="image-showcase">
+                        <img src="/Images/mixer2.jpg" alt="Digital Audio Mixer" class="img-fluid">
+                    </div>
+                    <div class="mt-3 text-center">
+                        <h5>Digital Signal Processing Unit</h5>
+                        <p class="text-muted">Advanced audio processing for professional applications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building and CCTV Showcase -->
+    <section>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="image-showcase">
+                        <img src="/Images/building1.jpg" alt="IICT Building" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="image-showcase">
+                        <img src="/Images/inicotv.jpg" alt="CCTV Security System" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="section-badge">What We Offer</span>
+                <h2>Comprehensive IT Solutions</h2>
+                <p>We deliver cutting-edge technology services tailored to your business needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h4>Satellite Communications</h4>
+                        <p>Leading suppliers of 70/140 MHz C-and Ku-Band RF transceivers, L-Band if C- and Ku- Band Block up Converters (BUC) and high power solid State Power Amplifiers (SSPA).</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                        <h4>VPN & Wide Area Networks (WAN)</h4>
+                        <p>With the aid of scalable or terrestrial VSAT (1.2, 1.8, 2.4, 3.8Metre) equipments, microwave & RF deployments, we can seamlessly inter-connect HQs with other Branch offices.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tower-cell"></i></div>
+                        <h4>Microwave & Radio Freq. (RF) Links</h4>
+                        <p>We deploy Narrowband Digital Microwave Radios for short, medium and long haul terrestrial links Full network Management capabilities.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                        <h4>Wireless Community (WiiComm)</h4>
+                        <p>With this infrastructural layout, we blue-print Internet connectivity for enclosed communities (e.g. Estates or Organizations' Official Residencies) by centralized integration of respective living areas.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-radio"></i></div>
+                        <h4>Radio Frequency Communication</h4>
+                        <p>A wide range of Communications solutions to cover all modern requirements, including voice, fax, email, telephone, interconnect GPS tracking, and data.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-satellite"></i></div>
+                        <h4>Tri-Fold Scalable VSAT Antenna</h4>
+                        <p>For organizations with field operations, IICT's Tri-Fold Scalable VSAT solutions ensure real-time data and communication between remote sites and headquarters.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-video"></i></div>
+                        <h4>CCTV & Security Surveillance Systems</h4>
+                        <p>IICT provides advanced analogue, hybrid, and IP-based CCTV systems with high-definition video recording and remote monitoring capabilities. Our solutions support motion detection, alarm integration, and cloud-ready DVR storage.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-fingerprint"></i></div>
+                        <h4>Biometric Authentication & Access Control</h4>
+                        <p>Our biometric solutions bring security and convenience together through fingerprint, facial, and iris recognition technologies. IICT's access control systems eliminate the need for keys or cards.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h4>Professional ICT Training</h4>
+                        <p>IICT offers result-oriented training programs that equip participants with practical, hands-on experience relevant to today's technology-driven world.</p>
+                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabinet / Server Equipment Showcase -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-badge">Infrastructure</span>
+                    <h2>Enterprise-Grade Server & Network Equipment</h2>
+                    <p class="text-muted">Our state-of-the-art server cabinets and networking equipment ensure reliable, secure, and high-performance IT infrastructure for your business.</p>
+                    <ul class="feature-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Enterprise Servers & Storage</li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Network Switches & Routers</li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Backup & Disaster Recovery</li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> 24/7 Monitoring & Maintenance</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="image-showcase">
+                        <img src="/Images/cabinet.jpg" alt="Server Cabinet and Network Equipment" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+<h5 class="mb-4">
+  <img src="/Images/logo.jpeg" alt="IICT Logo" style="height: 30px;">
+</h5>
+                    <p>Leading provider of innovative IT solutions, satellite communications, and professional ICT training across Nigeria.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Our Services</h5>
+                    <a href="services.html">Satellite Communications</a>
+                    <a href="services.html">VPN & WAN Solutions</a>
+                    <a href="services.html">Microwave & RF Links</a>
+                    <a href="services.html">CCTV & Security Systems</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> IICT Suite, University College Hospital, Queen Elizabeth Drive, Ibadan, Nigeria</p>
+                    <p><i class="fas fa-phone me-2"></i> +234 803 361 2288, +234 706 536 0711, +234 703 629 8394, +234 805 746 8141</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@iict-ng.com, ceo@iict-ng.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="mb-0">© 2026 IICT. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const backBtn = document.getElementById('backToTop');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backBtn.classList.add('show');
+            } else {
+                navbar.classList.remove('scrolled');
+                backBtn.classList.remove('show');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        let currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === '' || currentPage === 'services.html') {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'services.html') {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
