@@ -186,14 +186,31 @@
             border-bottom-color: rgba(124, 58, 237, 0.2);
         }
 
+        /* Updated navbar-brand for logo image - removed text gradient */
         .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin-right: 1rem;
+        }
+
+        /* Logo image styling */
+        .logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 180px;
+            transition: transform var(--transition-fast);
+            object-fit: contain;
+        }
+
+        .navbar-brand:hover .logo-img {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+            }
         }
 
         .nav-link {
@@ -853,9 +870,7 @@
             }
         }
     </style>
-</head>
-<body>
-
+    
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
            <a class="navbar-brand" href="index.html">
