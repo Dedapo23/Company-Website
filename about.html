@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IICT - About Us | Innovative IT Solutions & Technology Services Nigeria</title>
+    <meta name="description" content="Learn about IICT - Nigeria's leading provider of IT solutions, satellite communications, network security, VSAT, and professional ICT training.">
+    <meta name="keywords" content="about IICT, IT solutions Nigeria, satellite communications, VSAT, network security, ICT training">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/Images/logo.jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-glow: rgba(37, 99, 235, 0.2);
+            --secondary: #0f172a;
+            --secondary-light: #1e293b;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --gradient-glow: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --shadow-primary: 0 10px 30px rgba(37, 99, 235, 0.2);
+            --border-radius-sm: 12px;
+            --border-radius-md: 20px;
+            --border-radius-lg: 30px;
+            --border-radius-xl: 50px;
+            --transition-fast: 0.2s ease;
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            background-color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--secondary);
+            margin: 0 0.25rem;
+            transition: all var(--transition-base);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+            padding: 180px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 60%;
+            height: 120%;
+            background: var(--gradient-glow);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--primary-dark);
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            color: var(--primary);
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* DUAL IMAGE LAYOUT STYLES (as requested) */
+        .about-image-dual {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* primary large image wrapper */
+        .dual-img-primary {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            background: #eef2ff;
+        }
+
+        .dual-img-primary img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .dual-img-primary:hover img {
+            transform: scale(1.02);
+        }
+
+        /* secondary image wrapper with offset styling */
+        .dual-img-secondary-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dual-img-secondary {
+            width: 70%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .dual-img-secondary img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .dual-img-secondary:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 35px -14px rgba(0, 0, 0, 0.25);
+        }
+
+        .dual-img-secondary:hover img {
+            transform: scale(1.03);
+        }
+
+        .image-caption-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-weight: 500;
+            pointer-events: none;
+            font-family: monospace;
+            letter-spacing: 0.3px;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+        }
+
+        .about-image img {
+            transition: transform var(--transition-slow);
+            width: 100%;
+            height: auto;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .feature-list i {
+            width: 28px;
+            height: 28px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .feature-section {
+            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-base);
+            height: 100%;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.1; }
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .footer {
+            background: var(--secondary);
+            color: var(--gray-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer h5 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: all var(--transition-base);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            z-index: 1000;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        @media (max-width: 992px) {
+            .col-lg-6 {
+                width: 100%;
+            }
+            .about-image-dual {
+                margin-top: 2rem;
+                max-width: 550px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .dual-img-secondary {
+                width: 75%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+            
+            .page-header {
+                padding: 140px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .dual-img-secondary {
+                width: 85%;
+            }
+        }
+        
+        .logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/Images/logo.jpeg" alt="IICT Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary-custom">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1>About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIRST SECTION: DUAL IMAGE LAYOUT as requested (images: /Images/3Tvandcctv.jpg and Tvandcctv.jpg) -->
+    <section>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- LEFT SIDE: Text content -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                    <div class="about-text">
+                        <span class="section-badge"><i class="fas fa-camera me-1"></i> Surveillance & Smart Tech</span>
+                        <h2 class="mb-4">Advanced CCTV & <br>3TV Integration</h2>
+                        <p class="text-muted mb-4">State‑of‑the‑art surveillance ecosystems and intelligent IP monitoring systems power modern infrastructure. IICT delivers seamless integration of high‑definition cameras, AI‑driven analytics, and remote monitoring frameworks for total security coverage.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> <strong>4K Ultra HD & Night Vision</strong> - Crystal clear imaging</li>
+                            <li><i class="fas fa-check"></i> <strong>Cloud & On‑Premise Storage</strong> - Flexible data retention</li>
+                            <li><i class="fas fa-check"></i> <strong>Real‑time Alerts & AI Recognition</strong> - Smart threat detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- RIGHT SIDE: DUAL IMAGE LAYOUT with exactly two images: /Images/3Tvandcctv.jpg and Tvandcctv.jpg -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                    <div class="about-image-dual">
+                        <!-- FIRST IMAGE: large primary - /Images/3Tvandcctv.jpg -->
+                        <div class="dual-img-primary">
+                            <img src="/Images/3Tvandcctv.jpg" 
+                                 alt="3TV & CCTV surveillance control room | IICT" 
+                                 class="img-fluid w-100"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x600/1e293b/ffffff?text=3TV+%2B+CCTV+Preview';">
+                            <div class="image-caption-badge"><i class="fas fa-video"></i> 3TV & CCTV Core Network</div>
+                        </div>
+                        <!-- SECOND IMAGE: Tvandcctv.jpg - smaller offset image -->
+                        <div class="dual-img-secondary-wrapper">
+                            <div class="dual-img-secondary">
+                                <img src="Tvandcctv.jpg" 
+                                     alt="TV broadcast & CCTV monitoring integration | IICT" 
+                                     class="img-fluid w-100"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/700x500/0f172a/d9e2ef?text=TV+%2B+CCTV+System';">
+                                <div class="image-caption-badge" style="background: rgba(0,0,0,0.55);"><i class="fas fa-tv"></i> Broadcast & Surveillance</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECOND SECTION: ICT Solutions, Engineering and Support Services (original content) -->
+    <section style="padding-top: 0;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="/Images/server.png" alt="About IICT" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="section-badge">About Us</span>
+                    <h2 class="mb-4">ICT Solutions, Engineering and Support Services</h2>
+                    <p class="text-muted mb-4">IICT provides comprehensive information and communication technology solutions designed to meet the unique needs of individuals, businesses, and organizations. Our operations cover every phase of project delivery from planning and deployment to long-term maintenance and support. We focus on delivering reliable and efficient systems that enhance productivity, security, and connectivity.</p>
+                    <p class="text-muted mb-4">Our services cover hardware and software integration, network architecture, security systems, and remote monitoring solutions. We deliver durable, functional, and cost-effective results through a skilled team and modern technology, ensuring dependable support and real-time assistance for every client.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <strong>Expert Team</strong> - Certified professionals</li>
+                        <li><i class="fas fa-check"></i> <strong>24/7 Support</strong> - Always here for you</li>
+                        <li><i class="fas fa-check"></i> <strong>Cutting-Edge Tech</strong> - Latest solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THIRD SECTION: Training & Development -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="/Images/crew.jpg" alt="ICT Training" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                    <span class="section-badge">Training & Development</span>
+                    <h2 class="mb-4">Professional ICT Training and Capacity Building</h2>
+                    <p class="text-muted mb-4">IICT is also recognized as a centre for professional ICT training and capacity development. Through our training institute, we offer result oriented programs that equip participants with practical, hands on experience relevant to today's technology-driven world. Our training covers a wide range of ICT disciplines and caters to individuals, organizations, and corporate teams seeking to improve their technical competence and digital capacity.</p>
+                    <p class="text-muted mb-4">Over the years, IICT has trained hundreds of professionals through workshops, classroom sessions, and tailored programs. We are dedicated to equipping people with the knowledge and skills to excel in the ICT field, reflecting our commitment to excellence, innovation, and the growth of technology education in Nigeria and beyond.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <strong>Hands-on Training</strong> - Practical experience</li>
+                        <li><i class="fas fa-check"></i> <strong>Certified Instructors</strong> - Industry experts</li>
+                        <li><i class="fas fa-check"></i> <strong>Flexible Programs</strong> - Tailored to your needs</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary-custom mt-3">Contact Us <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOURTH SECTION: Why Choose Us (feature cards) -->
+    <section>
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-badge">Why Choose Us</span>
+                <h2>We Are The Best!</h2>
+                <p>From Basic Server/Workstation Network Architecture to CCTV Security Surveillance, Remote Monitoring Systems, Biometric Authentication, Time Management, and Access Control Systems, IICT provides cutting-edge solutions that are durable, functional, and tailored to meet specific client needs.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                        <h5>Expert Team</h5>
+                        <p class="text-muted">Years of industry experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <h5>Quality Services</h5>
+                        <p class="text-muted">Premium solutions guaranteed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                        <h5>Positive Consultation</h5>
+                        <p class="text-muted">Free initial assessment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                        <h5>24/7 Support</h5>
+                        <p class="text-muted">Round-the-clock assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4"><i class="fas fa-microchip me-2"></i>IICT</h5>
+                    <p>Leading provider of innovative IT solutions, satellite communications, and professional ICT training across Nigeria.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Our Services</h5>
+                    <a href="services.html">Satellite Communications</a>
+                    <a href="services.html">VPN & WAN Solutions</a>
+                    <a href="services.html">Microwave & RF Links</a>
+                    <a href="services.html">Wireless Communities</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> IICT Suite, University College Hospital, Queen Elizabeth Drive, Ibadan, Nigeria</p>
+                    <p><i class="fas fa-phone me-2"></i> +234 803 361 2288, +234 706 536 0711, +234 703 629 8394, +234 805 746 8141</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@iict-ng.com, ceo@iict-ng.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="mb-0">© 2026 IICT - Innovative ICT Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const backBtn = document.getElementById('backToTop');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backBtn.classList.add('show');
+            } else {
+                navbar.classList.remove('scrolled');
+                backBtn.classList.remove('show');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        let currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === '' || currentPage === 'about.html') {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'about.html') {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Optional: fallback console log for dual images
+        console.log('Dual image layout active: featuring /Images/3Tvandcctv.jpg + Tvandcctv.jpg');
+    </script>
+</body>
+</html>
