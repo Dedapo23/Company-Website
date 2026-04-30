@@ -11,7 +11,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,9 +23,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* ========================================
-           GLOBAL STYLES & VARIABLES
-        ======================================== */
         * {
             margin: 0;
             padding: 0;
@@ -33,53 +30,58 @@
         }
 
         :root {
-            --primary: #2563eb;
-            --primary-light: #3b82f6;
-            --primary-dark: #1d4ed8;
-            --primary-glow: rgba(37, 99, 235, 0.2);
-            --secondary: #0f172a;
-            --secondary-light: #1e293b;
+            --primary: #7c3aed;
+            --primary-dark: #6d28d9;
+            --primary-light: #8b5cf6;
+            --primary-glow: rgba(124, 58, 237, 0.3);
+            --secondary: #ec4899;
+            --secondary-dark: #db2777;
             --accent: #06b6d4;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --dark: #0f172a;
+            --dark: #020617;
+            --dark-light: #0f172a;
             --gray: #64748b;
             --gray-light: #94a3b8;
-            --light: #f8fafc;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --light-bg: #f8fafc;
             --white: #ffffff;
-            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-            --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-            --gradient-glow: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
-            --shadow-primary: 0 10px 30px rgba(37, 99, 235, 0.2);
+            --gradient-1: linear-gradient(135deg, #7c3aed 0%, #ec4899 50%, #06b6d4 100%);
+            --gradient-2: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --gradient-3: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+            --gradient-4: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --gradient-dark: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            --gradient-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            --gradient-purple: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.2);
+            --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.4);
+            --shadow-primary: 0 10px 30px rgba(124, 58, 237, 0.25);
             --border-radius-sm: 12px;
             --border-radius-md: 20px;
             --border-radius-lg: 30px;
-            --border-radius-xl: 50px;
+            --border-radius-xl: 40px;
             --transition-fast: 0.2s ease;
             --transition-base: 0.3s ease;
             --transition-slow: 0.5s ease;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--secondary);
-            background-color: var(--white);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            color: #1e1b4b;
             overflow-x: hidden;
             line-height: 1.6;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--light);
+            background: #e9d5ff;
         }
         ::-webkit-scrollbar-thumb {
             background: var(--primary);
@@ -89,15 +91,11 @@
             background: var(--primary-dark);
         }
 
-        /* Selection Color */
         ::selection {
             background: var(--primary);
             color: white;
         }
 
-        /* ========================================
-           TYPOGRAPHY
-        ======================================== */
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             line-height: 1.2;
@@ -115,9 +113,6 @@
             }
         }
 
-        /* ========================================
-           BUTTONS
-        ======================================== */
         .btn {
             padding: 0.85rem 2rem;
             border-radius: var(--border-radius-xl);
@@ -145,7 +140,7 @@
         }
 
         .btn-primary-custom {
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             color: white;
             border: none;
             box-shadow: var(--shadow-primary);
@@ -153,7 +148,7 @@
 
         .btn-primary-custom:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
             color: white;
         }
 
@@ -167,6 +162,7 @@
             background: var(--primary);
             color: white;
             transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
         }
 
         .btn-lg-custom {
@@ -174,27 +170,26 @@
             font-size: 1.1rem;
         }
 
-        /* ========================================
-           NAVIGATION
-        ======================================== */
         .navbar {
             background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             padding: 1rem 0;
             transition: all var(--transition-base);
             box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
         }
 
         .navbar.scrolled {
             padding: 0.5rem 0;
             box-shadow: var(--shadow-lg);
             background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: rgba(124, 58, 237, 0.2);
         }
 
         .navbar-brand {
             font-size: 1.8rem;
             font-weight: 800;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -203,7 +198,7 @@
 
         .nav-link {
             font-weight: 500;
-            color: var(--secondary);
+            color: #4c1d95;
             margin: 0 0.25rem;
             transition: all var(--transition-base);
             position: relative;
@@ -217,7 +212,7 @@
             transform: translateX(-50%);
             width: 0;
             height: 2px;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             transition: width var(--transition-base);
             border-radius: 2px;
         }
@@ -230,13 +225,11 @@
         .nav-link:hover,
         .nav-link.active {
             color: var(--primary);
+            text-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
         }
 
-        /* ========================================
-           HERO SECTION
-        ======================================== */
         .hero {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #fae8ff 100%);
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #ede9fe 100%);
             padding: 160px 0 100px;
             position: relative;
             overflow: hidden;
@@ -249,7 +242,7 @@
             right: -10%;
             width: 60%;
             height: 120%;
-            background: var(--gradient-glow);
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -261,28 +254,29 @@
             left: -10%;
             width: 50%;
             height: 80%;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
 
         .hero-badge {
             display: inline-block;
-            background: rgba(37, 99, 235, 0.1);
+            background: rgba(124, 58, 237, 0.12);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(124, 58, 237, 0.2);
             color: var(--primary);
             padding: 0.5rem 1.2rem;
             border-radius: var(--border-radius-xl);
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            backdrop-filter: blur(5px);
         }
 
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.2;
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #06b6d4 100%);
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -305,7 +299,6 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* Stat Cards */
         .stat-card {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
@@ -313,25 +306,26 @@
             border-radius: var(--border-radius-md);
             box-shadow: var(--shadow-md);
             transition: all var(--transition-base);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(124, 58, 237, 0.15);
         }
 
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
             background: white;
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             line-height: 1;
         }
 
-        /* ========================================
-           SECTION STYLES
-        ======================================== */
         section {
             padding: 80px 0;
             position: relative;
@@ -339,7 +333,8 @@
 
         .section-badge {
             display: inline-block;
-            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
+            border: 1px solid rgba(124, 58, 237, 0.2);
             color: var(--primary);
             padding: 0.5rem 1.2rem;
             border-radius: var(--border-radius-xl);
@@ -357,14 +352,14 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
         .section-title p {
-            color: var(--gray);
+            color: #5b21b6;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -375,19 +370,17 @@
             }
         }
 
-        /* ========================================
-           SERVICE CARDS
-        ======================================== */
         .service-card {
             background: var(--white);
             border-radius: var(--border-radius-md);
             padding: 2rem;
             transition: all var(--transition-base);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(124, 58, 237, 0.1);
             height: 100%;
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
+            cursor: pointer;
         }
 
         .service-card::before {
@@ -397,7 +390,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             transform: scaleX(0);
             transition: transform var(--transition-base);
         }
@@ -409,13 +402,13 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-xl);
-            border-color: transparent;
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .service-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
             border-radius: 18px;
             display: flex;
             align-items: center;
@@ -425,7 +418,7 @@
         }
 
         .service-card:hover .service-icon {
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
         }
 
         .service-card:hover .service-icon i {
@@ -442,10 +435,11 @@
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: #1e1b4b;
         }
 
         .service-card p {
-            color: var(--gray);
+            color: #4c1d95;
             line-height: 1.6;
         }
 
@@ -465,11 +459,8 @@
             color: var(--primary-dark);
         }
 
-        /* ========================================
-           ABOUT SECTION
-        ======================================== */
         .about-section {
-            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
         }
 
         .about-image {
@@ -504,7 +495,7 @@
         .feature-list i {
             width: 28px;
             height: 28px;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
@@ -513,9 +504,6 @@
             color: white;
         }
 
-        /* ========================================
-           WHY CHOOSE US
-        ======================================== */
         .why-card {
             background: var(--white);
             border-radius: var(--border-radius-md);
@@ -524,18 +512,19 @@
             transition: all var(--transition-base);
             height: 100%;
             box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(124, 58, 237, 0.1);
         }
 
         .why-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .why-icon {
             width: 80px;
             height: 80px;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -548,7 +537,7 @@
             content: '';
             position: absolute;
             inset: -5px;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             border-radius: 50%;
             opacity: 0.3;
             animation: pulse 2s infinite;
@@ -564,24 +553,23 @@
             color: white;
         }
 
-        /* ========================================
-           TEAM SECTION
-        ======================================== */
         .team-card {
             background: var(--white);
             border-radius: var(--border-radius-md);
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             transition: all var(--transition-base);
+            border: 1px solid rgba(124, 58, 237, 0.1);
         }
 
         .team-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .team-img {
-            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
             padding: 2rem;
             text-align: center;
             position: relative;
@@ -620,6 +608,7 @@
             font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 0.3rem;
+            color: #1e1b4b;
         }
 
         .team-info .position {
@@ -637,26 +626,23 @@
         .social-links a {
             width: 35px;
             height: 35px;
-            background: var(--light);
+            background: #ede9fe;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: var(--gray);
+            color: var(--primary);
             transition: all var(--transition-base);
         }
 
         .social-links a:hover {
-            background: var(--primary);
+            background: var(--gradient-1);
             color: white;
             transform: translateY(-3px);
         }
 
-        /* ========================================
-           TESTIMONIALS
-        ======================================== */
         .testimonials-section {
-            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);
         }
 
         .testimonial-card {
@@ -666,19 +652,20 @@
             box-shadow: var(--shadow-md);
             transition: all var(--transition-base);
             height: 100%;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(124, 58, 237, 0.1);
             position: relative;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .testimonial-img {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -701,7 +688,7 @@
         }
 
         .testimonial-text {
-            color: var(--gray);
+            color: #4c1d95;
             line-height: 1.7;
             margin: 1rem 0;
             font-style: italic;
@@ -709,17 +696,14 @@
 
         .quote-icon {
             font-size: 3rem;
-            color: rgba(37, 99, 235, 0.1);
+            color: rgba(124, 58, 237, 0.1);
             position: absolute;
             bottom: 1rem;
             right: 1rem;
         }
 
-        /* ========================================
-           CTA SECTION
-        ======================================== */
         .cta-section {
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             position: relative;
             overflow: hidden;
         }
@@ -731,7 +715,7 @@
             right: -20%;
             width: 60%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -757,13 +741,11 @@
             color: var(--primary-dark);
         }
 
-        /* ========================================
-           FOOTER
-        ======================================== */
         .footer {
-            background: var(--secondary);
-            color: var(--gray-light);
+            background: linear-gradient(135deg, #0f0717 0%, #1a0b2e 100%);
+            color: #c4b5fd;
             padding: 60px 0 20px;
+            border-top: 1px solid rgba(124, 58, 237, 0.2);
         }
 
         .footer h5 {
@@ -773,7 +755,7 @@
         }
 
         .footer a {
-            color: var(--gray-light);
+            color: #c4b5fd;
             text-decoration: none;
             transition: all var(--transition-base);
             display: block;
@@ -781,7 +763,7 @@
         }
 
         .footer a:hover {
-            color: white;
+            color: var(--primary-light);
             transform: translateX(5px);
         }
 
@@ -794,7 +776,7 @@
         .social-icons a {
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(124, 58, 237, 0.2);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
@@ -803,27 +785,24 @@
         }
 
         .social-icons a:hover {
-            background: var(--primary);
+            background: var(--gradient-1);
             transform: translateY(-3px);
         }
 
         .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(124, 58, 237, 0.2);
             padding-top: 2rem;
             margin-top: 3rem;
             text-align: center;
         }
 
-        /* ========================================
-           BACK TO TOP
-        ======================================== */
         .back-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
             width: 50px;
             height: 50px;
-            background: var(--gradient-primary);
+            background: var(--gradient-1);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -846,9 +825,6 @@
             transform: translateY(-5px) scale(1.1);
         }
 
-        /* ========================================
-           RESPONSIVE
-        ======================================== */
         @media (max-width: 768px) {
             section {
                 padding: 60px 0;
@@ -880,28 +856,26 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-microchip me-2"></i>IICT</a>
+            <a class="navbar-brand" href="index.html"><i class="fas fa-microchip me-2"></i>IICT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary-custom">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="contact.html" class="btn btn-primary-custom">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="row align-items-center">
@@ -910,8 +884,8 @@
                     <h1>Innovative IT Solutions for Modern Business</h1>
                     <p class="lead text-muted mb-4">We deliver cutting-edge technology solutions including satellite communications, network security, VSAT, and professional ICT training across Nigeria.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#services" class="btn btn-primary-custom btn-lg-custom">Explore Services</a>
-                        <a href="#contact" class="btn btn-outline-custom btn-lg-custom">Contact Us</a>
+                        <a href="services.html" class="btn btn-primary-custom btn-lg-custom">Explore Services</a>
+                        <a href="contact.html" class="btn btn-outline-custom btn-lg-custom">Contact Us</a>
                     </div>
                     <div class="row mt-5 g-3">
                         <div class="col-4">
@@ -943,7 +917,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="row align-items-center g-5">
@@ -962,13 +935,12 @@
                         <li><i class="fas fa-check"></i> <strong>24/7 Technical Support</strong> - We're always here</li>
                         <li><i class="fas fa-check"></i> <strong>Cutting-Edge Technology</strong> - Latest industry solutions</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary-custom mt-3">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="about.html" class="btn btn-primary-custom mt-3">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -978,58 +950,57 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='services.html'">
                         <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
                         <h4>Satellite Communications</h4>
                         <p>Leading suppliers of C-band and Ku-band RF transceivers, BUCs, and high-power SSPA amplifiers for reliable satellite connectivity.</p>
-                        <a href="#contact" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-link">Learn More <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='services.html'">
                         <div class="service-icon"><i class="fas fa-network-wired"></i></div>
                         <h4>VPN & WAN Solutions</h4>
                         <p>Seamless interconnection between headquarters and branch offices using scalable VSAT, microwave, and RF deployments.</p>
-                        <a href="#contact" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-link">Learn More <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='services.html'">
                         <div class="service-icon"><i class="fas fa-tower-cell"></i></div>
                         <h4>Microwave & RF Links</h4>
                         <p>Deployment of narrowband digital microwave radios for short, medium, and long-haul terrestrial links with full network management.</p>
-                        <a href="#contact" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-link">Learn More <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='services.html'">
                         <div class="service-icon"><i class="fas fa-wifi"></i></div>
                         <h4>Wireless Community (WiiComm)</h4>
                         <p>Centralized internet connectivity for enclosed communities like estates and residential areas.</p>
-                        <a href="#contact" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-link">Learn More <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='services.html'">
                         <div class="service-icon"><i class="fas fa-radio"></i></div>
                         <h4>Radio Frequency Communication</h4>
                         <p>Complete communications solutions including voice, fax, email, telephone interconnect, GPS tracking, and data services.</p>
-                        <a href="#contact" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-link">Learn More <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-card">
+                    <div class="service-card" onclick="window.location.href='services.html'">
                         <div class="service-icon"><i class="fas fa-satellite"></i></div>
                         <h4>Tri-Fold VSAT Antenna</h4>
                         <p>Remote site connectivity solutions for field operations, construction firms, and mobile projects with real-time data communication.</p>
-                        <a href="#contact" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <div class="service-link">Learn More <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
     <section class="about-section">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -1070,7 +1041,6 @@
         </div>
     </section>
 
-    <!-- Team Section -->
     <section id="team">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -1082,7 +1052,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="/Images/team-1.jpg" alt="Adetayo A." onerror="this.parentElement.innerHTML='<i class=\'fas fa-user-tie\'></i>'">
+                            <i class="fas fa-user-tie"></i>
                         </div>
                         <div class="team-info">
                             <h5>Adetayo A.</h5>
@@ -1097,7 +1067,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="/Images/team-2.jpg" alt="Omopariola A. David" onerror="this.parentElement.innerHTML='<i class=\'fas fa-laptop-code\'></i>'">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
                         <div class="team-info">
                             <h5>Omopariola A. David</h5>
@@ -1112,7 +1082,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="/Images/team-3.jpg" alt="Olalekan Jubril Damilola" onerror="this.parentElement.innerHTML='<i class=\'fas fa-chart-simple\'></i>'">
+                            <i class="fas fa-chart-simple"></i>
                         </div>
                         <div class="team-info">
                             <h5>Olalekan Jubril Damilola</h5>
@@ -1127,7 +1097,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="/Images/team-4.jpg" alt="Albert A. Dedapo" onerror="this.parentElement.innerHTML='<i class=\'fas fa-project-diagram\'></i>'">
+                            <i class="fas fa-project-diagram"></i>
                         </div>
                         <div class="team-info">
                             <h5>Albert A. Dedapo</h5>
@@ -1143,7 +1113,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -1155,9 +1124,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-card">
                         <div class="testimonial-img"><i class="fas fa-user-circle"></i></div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         <p class="testimonial-text">"IICT has been a game-changer for our organization. Their technical team delivered a seamless network setup and provided outstanding support even after deployment. Truly dependable!"</p>
                         <h6 class="mb-0">Samuel O.</h6>
                         <small class="text-muted">Another satisfied business man</small>
@@ -1167,9 +1134,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-card">
                         <div class="testimonial-img"><i class="fas fa-user-circle"></i></div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         <p class="testimonial-text">"The training program at IICT was beyond expectations. The instructors made complex ICT concepts easy to understand, and I left with practical skills I now use daily."</p>
                         <h6 class="mb-0">Tunde A.</h6>
                         <small class="text-muted">IICT Trainee</small>
@@ -1179,9 +1144,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="testimonial-card">
                         <div class="testimonial-img"><i class="fas fa-user-circle"></i></div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+                        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         <p class="testimonial-text">"What stands out about IICT is their commitment to excellence. From consultation to installation, every step was handled professionally and efficiently."</p>
                         <h6 class="mb-0">Mrs. Ifeoma K.</h6>
                         <small class="text-muted">One of our satisfied client</small>
@@ -1192,7 +1155,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="container">
             <div class="row align-items-center">
@@ -1201,13 +1163,12 @@
                     <p class="text-white-50 mb-0 fs-5">Let's discuss how IICT can help you achieve your technology goals</p>
                 </div>
                 <div class="col-lg-4 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
-                    <a href="#" class="btn btn-cta">Get in Touch <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="contact.html" class="btn btn-cta">Get in Touch <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
@@ -1223,23 +1184,24 @@
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h5 class="mb-4">Quick Links</h5>
-                    <a href="#home">Home</a>
-                    <a href="#about">About Us</a>
-                    <a href="#services">Services</a>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
                     <a href="#team">Our Team</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Our Services</h5>
-                    <a href="#">Satellite Communications</a>
-                    <a href="#">VPN & WAN Solutions</a>
-                    <a href="#">Microwave & RF Links</a>
-                    <a href="#">Wireless Communities</a>
+                    <a href="services.html">Satellite Communications</a>
+                    <a href="services.html">VPN & WAN Solutions</a>
+                    <a href="services.html">Microwave & RF Links</a>
+                    <a href="services.html">Wireless Communities</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Contact Info</h5>
                     <p><i class="fas fa-map-marker-alt me-2"></i> IICT Suite, University College Hospital, Queen Elizabeth Drive, Ibadan, Nigeria</p>
-                    <p><i class="fas fa-phone me-2"></i> +234 803 361 2288</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@iict-ng.com</p>
+                    <p><i class="fas fa-phone me-2"></i> +234 803 361 2288, +234 706 536 0711, +234 703 629 8394, +234 805 746 8141</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@iict-ng.com, ceo@iict-ng.com</p>
                 </div>
             </div>
             <div class="copyright">
@@ -1248,24 +1210,20 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <div class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
-        // Initialize AOS
         AOS.init({
             duration: 800,
             once: true,
             offset: 100
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             const backBtn = document.getElementById('backToTop');
@@ -1279,12 +1237,10 @@
             }
         });
 
-        // Back to top
         document.getElementById('backToTop').addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1295,7 +1251,6 @@
             });
         });
 
-        // Counter animation
         const counters = document.querySelectorAll('.stat-number');
         const animateCounter = (counter) => {
             const text = counter.innerText;
@@ -1314,7 +1269,6 @@
             updateCounter();
         };
         
-        // Intersection Observer for counters
         const observerOptions = { threshold: 0.5 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1327,7 +1281,6 @@
         
         counters.forEach(counter => observer.observe(counter));
 
-        // Active nav link on scroll
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
         
@@ -1348,6 +1301,15 @@
                 }
             });
         });
+
+        let currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === '' || currentPage === 'index.html') {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'index.html') {
+                    link.classList.add('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>
