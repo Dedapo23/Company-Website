@@ -178,7 +178,6 @@
             color: transparent;
         }
 
-        /* Scrolling Gallery - Slow right to left */
         .marquee-container {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
             padding: 40px 0;
@@ -247,7 +246,6 @@
             }
         }
 
-        /* Featured Project Card */
         .featured-card {
             background: var(--white);
             border-radius: var(--border-radius-md);
@@ -491,7 +489,7 @@
     <!-- Scrolling Gallery - ALL images from /gallery folder automatically -->
     <div class="marquee-container">
         <div class="marquee" id="marqueeGallery">
-            <!-- All images from /gallery folder will appear here automatically -->
+            <div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">Loading images from /gallery folder...</div>
         </div>
     </div>
 
@@ -631,81 +629,40 @@
         });
 
         // AUTOMATICALLY LOAD ALL IMAGES FROM /gallery FOLDER
-        // You DO NOT need to list any image names here
-        // This function fetches all image files from the /gallery directory
-        
-        async function loadAllGalleryImages() {
-            const marquee = document.getElementById('marqueeGallery');
-            
-            // Show loading message
-            marquee.innerHTML = '<div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">📸 Loading images from /gallery folder...</div>';
-            
-            try {
-                // Fetch the list of images from the server
-                // Note: This requires a simple PHP or server-side file listing
-                // For static HTML without backend, we'll use a different approach
+        fetch('/get-images.php')
+            .then(response => response.json())
+            .then(images => {
+                const marquee = document.getElementById('marqueeGallery');
+                let html = '';
                 
-                // Alternative: Use a simple JSON file or manifest
-                // For now, we'll try to load images by checking common extensions
-                // But the best solution is to have a small PHP file
-                
-                // Let me create a manifest approach - you can also use a simple PHP script
-                const response = await fetch('/gallery/image-list.json');
-                if (response.ok) {
-                    const images = await response.json();
-                    displayImages(images);
+                if (images.length === 0) {
+                    html = '<div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">📸 No images found in /gallery folder. Add some images!</div>';
                 } else {
-                    // If no manifest exists, show instruction
-                    showInstructions();
+                    // Duplicate 3 times for seamless scrolling
+                    for (let repeat = 0; repeat < 3; repeat++) {
+                        images.forEach(img => {
+                            html += `
+                                <div class="marquee-item">
+                                    <a href="/gallery/${img}" data-lightbox="gallery">
+                                        <img src="/gallery/${img}" alt="IICT Gallery Image" onerror="this.src='https://via.placeholder.com/300x220?text=Image+Error'">
+                                    </a>
+                                </div>
+                            `;
+                        });
+                    }
                 }
-            } catch (error) {
-                showInstructions();
-            }
-        }
-        
-        function displayImages(images) {
-            const marquee = document.getElementById('marqueeGallery');
-            let html = '';
-            
-            if (images.length === 0) {
-                html = '<div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">📸 No images found in /gallery folder. Add some images!</div>';
-            } else {
-                // Duplicate 3 times for seamless scrolling
-                for (let repeat = 0; repeat < 3; repeat++) {
-                    images.forEach(img => {
-                        html += `
-                            <div class="marquee-item">
-                                <a href="/gallery/${img}" data-lightbox="gallery">
-                                    <img src="/gallery/${img}" alt="IICT Gallery Image" onerror="this.src='https://via.placeholder.com/300x220?text=Image+Error'">
-                                </a>
-                            </div>
-                        `;
-                    });
-                }
-            }
-            marquee.innerHTML = html;
-            
-            lightbox.option({
-                'resizeDuration': 200,
-                'wrapAround': true
+                marquee.innerHTML = html;
+                
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true
+                });
+            })
+            .catch(error => {
+                console.error('Error loading images:', error);
+                const marquee = document.getElementById('marqueeGallery');
+                marquee.innerHTML = '<div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">📸 Error loading images. Make sure get-images.php exists in your root folder.</div>';
             });
-        }
-        
-        function showInstructions() {
-            const marquee = document.getElementById('marqueeGallery');
-            marquee.innerHTML = `
-                <div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px; max-width: 500px; white-space: normal;">
-                    <strong>📸 How to add images:</strong><br><br>
-                    Method 1 (Recommended): Create a file called <strong>image-list.json</strong> in your /gallery folder with this content:<br>
-                    <code>["image1.jpg", "image2.png", "image3.webp"]</code><br><br>
-                    Method 2: Contact your developer to set up automatic image detection.<br><br>
-                    Just put your images in the <strong>/gallery</strong> folder and create the JSON file!
-                </div>
-            `;
-        }
-        
-        // Try to load images
-        loadAllGalleryImages();
     </script>
 </body>
 </html>
