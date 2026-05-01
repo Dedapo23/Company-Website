@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IICT - Gallery | Our Work & Projects</title>
     <meta name="description" content="Explore IICT's gallery of completed projects, equipment, installations, and training sessions across Nigeria.">
-    <meta name="keywords" content="IICT gallery, IT projects Nigeria, CCTV installation, satellite installation, ICT training photos">
     
     <link rel="icon" type="image/jpeg" href="/Images/logo.jpeg">
     
@@ -30,34 +29,18 @@
             --primary: #2563eb;
             --primary-light: #3b82f6;
             --primary-dark: #1d4ed8;
-            --primary-glow: rgba(37, 99, 235, 0.2);
             --secondary: #0f172a;
-            --secondary-light: #1e293b;
-            --accent: #06b6d4;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --dark: #0f172a;
             --gray: #64748b;
             --gray-light: #94a3b8;
             --light: #f8fafc;
             --white: #ffffff;
             --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-            --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-            --gradient-glow: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
             --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.06);
             --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
-            --shadow-primary: 0 10px 30px rgba(37, 99, 235, 0.2);
-            --border-radius-sm: 12px;
             --border-radius-md: 20px;
-            --border-radius-lg: 30px;
             --border-radius-xl: 50px;
-            --transition-fast: 0.2s ease;
             --transition-base: 0.3s ease;
-            --transition-slow: 0.5s ease;
         }
 
         body {
@@ -78,69 +61,26 @@
             background: var(--primary);
             border-radius: 5px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-dark);
-        }
-
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
 
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             line-height: 1.2;
         }
 
-        .btn {
-            padding: 0.85rem 2rem;
-            border-radius: var(--border-radius-xl);
-            font-weight: 600;
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-            z-index: -1;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
         .btn-primary-custom {
             background: var(--gradient-primary);
             color: white;
             border: none;
-            box-shadow: var(--shadow-primary);
+            padding: 0.85rem 2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            transition: all var(--transition-base);
         }
 
         .btn-primary-custom:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
             color: white;
-        }
-
-        .btn-outline-custom {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline-custom:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
         }
 
         .navbar {
@@ -154,7 +94,6 @@
         .navbar.scrolled {
             padding: 0.5rem 0;
             box-shadow: var(--shadow-lg);
-            background: rgba(255, 255, 255, 0.98);
         }
 
         .nav-link {
@@ -195,18 +134,6 @@
             overflow: hidden;
         }
 
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -10%;
-            width: 60%;
-            height: 120%;
-            background: var(--gradient-glow);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
         .page-header h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -221,13 +148,8 @@
             text-decoration: none;
         }
 
-        .breadcrumb-item.active {
-            color: var(--primary-dark);
-        }
-
         section {
             padding: 80px 0;
-            position: relative;
         }
 
         .section-badge {
@@ -256,12 +178,7 @@
             color: transparent;
         }
 
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
+        /* Scrolling Gallery - Slow right to left */
         .marquee-container {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
             padding: 40px 0;
@@ -293,7 +210,7 @@
 
         .marquee {
             display: inline-block;
-            animation: scroll 40s linear infinite;
+            animation: scrollSlow 60s linear infinite;
             white-space: nowrap;
         }
 
@@ -304,12 +221,11 @@
         .marquee-item {
             display: inline-block;
             margin: 0 15px;
-            transition: all var(--transition-base);
         }
 
         .marquee-item img {
-            width: 280px;
-            height: 200px;
+            width: 300px;
+            height: 220px;
             object-fit: cover;
             border-radius: var(--border-radius-md);
             box-shadow: var(--shadow-md);
@@ -319,10 +235,10 @@
 
         .marquee-item img:hover {
             transform: scale(1.05);
-            box-shadow: var(--shadow-xl);
+            box-shadow: var(--shadow-lg);
         }
 
-        @keyframes scroll {
+        @keyframes scrollSlow {
             0% {
                 transform: translateX(0);
             }
@@ -331,49 +247,40 @@
             }
         }
 
-        .featured-section {
-            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
-        }
-
+        /* Featured Project Card */
         .featured-card {
             background: var(--white);
             border-radius: var(--border-radius-md);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            transition: all var(--transition-base);
-            margin-bottom: 2rem;
             border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .featured-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
         }
 
         .featured-card-img {
             width: 100%;
-            height: 400px;
+            max-height: 500px;
             object-fit: cover;
         }
 
         .featured-card-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
         .featured-card-content h3 {
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--primary);
         }
 
-        .featured-card-content .subtitle {
-            font-size: 1.1rem;
+        .featured-card-content .developed-by {
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--primary);
-            padding-left: 1rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
         }
 
         .featured-card-content p {
@@ -385,15 +292,15 @@
 
         .featured-card-content .highlight {
             background: var(--light);
-            padding: 1rem;
-            border-radius: var(--border-radius-sm);
-            margin: 1rem 0;
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
         }
 
         .featured-card-content .highlight h4 {
             color: var(--primary);
             font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .featured-card-content ul {
@@ -410,118 +317,13 @@
 
         .featured-card-content ul li i {
             color: var(--primary);
-            font-size: 0.9rem;
+            width: 20px;
         }
 
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .filter-btn {
-            background: var(--light);
-            border: none;
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 500;
-            color: var(--gray);
-            transition: all var(--transition-base);
-            cursor: pointer;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .gallery-grid {
+        .two-columns {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .gallery-card {
-            background: var(--white);
-            border-radius: var(--border-radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-base);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .gallery-card-img {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .gallery-card-img img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            transition: transform var(--transition-slow);
-        }
-
-        .gallery-card:hover .gallery-card-img img {
-            transform: scale(1.08);
-        }
-
-        .gallery-card-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            padding: 1rem;
-            opacity: 0;
-            transition: opacity var(--transition-base);
-            text-align: center;
-        }
-
-        .gallery-card:hover .gallery-card-overlay {
-            opacity: 1;
-        }
-
-        .gallery-card-overlay a {
-            color: white;
-            font-size: 1.2rem;
-            margin: 0 8px;
-            text-decoration: none;
-        }
-
-        .gallery-card-info {
-            padding: 1.5rem;
-        }
-
-        .gallery-card-info h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .gallery-card-info p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .gallery-card-info .category {
-            display: inline-block;
-            background: var(--light);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            color: var(--primary);
-            font-weight: 600;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
         }
 
         .footer {
@@ -595,16 +397,11 @@
             visibility: hidden;
             transition: all var(--transition-base);
             z-index: 1000;
-            box-shadow: var(--shadow-primary);
         }
 
         .back-to-top.show {
             opacity: 1;
             visibility: visible;
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-5px) scale(1.1);
         }
 
         .logo-img {
@@ -617,10 +414,6 @@
         @media (max-width: 768px) {
             section {
                 padding: 60px 0;
-            }
-            
-            .navbar-nav {
-                padding: 1rem 0;
             }
             
             .page-header {
@@ -639,21 +432,21 @@
                 height: 40px;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            }
-
             .marquee-item img {
                 width: 200px;
                 height: 150px;
             }
 
-            .featured-card-img {
-                height: 250px;
+            .featured-card-content {
+                padding: 1.5rem;
             }
 
             .featured-card-content h3 {
                 font-size: 1.4rem;
+            }
+
+            .two-columns {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -695,30 +488,32 @@
         </div>
     </div>
 
-    <!-- Scrolling Marquee Gallery - All images from /Gallery folder -->
+    <!-- Scrolling Gallery - ALL images from /gallery folder automatically -->
     <div class="marquee-container">
         <div class="marquee" id="marqueeGallery">
-            <!-- Images will be loaded dynamically from /Gallery folder -->
+            <!-- All images from /gallery folder will appear here automatically -->
         </div>
     </div>
 
-    <!-- Featured Section with Electronic Medical Records System -->
-    <section class="featured-section">
+    <!-- Featured Project - App.jpg with text -->
+    <section>
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <span class="section-badge">Featured Project</span>
-                <h2>Our Flagship Solution</h2>
-                <p>Developed by IICT - Innovation at its finest</p>
+                <h2>Developed by IICT</h2>
+                <p>Innovative solutions for modern healthcare</p>
             </div>
             
             <div class="row justify-content-center">
                 <div class="col-lg-10" data-aos="fade-up">
                     <div class="featured-card">
-                        <img src="/Images/App.jpg" alt="Electronic Medical Records System" class="featured-card-img" onerror="this.src='https://via.placeholder.com/1200x400?text=IICT+EMR+System'">
+                        <img src="/Images/App.jpg" alt="Electronic Medical Records System" class="featured-card-img" onerror="this.src='https://via.placeholder.com/1200x500?text=IICT+EMR+System'">
                         <div class="featured-card-content">
                             <h3>Unified Electronic Medical Records & Health Management System</h3>
-                            <div class="subtitle">Developed by IICT</div>
+                            <div class="developed-by">Developed by IICT</div>
+                            
                             <p>A unified electronic medical records and health management system is an integrated digital platform that combines patient medical records with tools for managing healthcare services all in one place.</p>
+                            
                             <p>Instead of having separate systems for patient files, appointments, billing, lab results, and hospital operations, a unified system brings everything together so healthcare providers can access and manage information seamlessly.</p>
                             
                             <div class="highlight">
@@ -733,22 +528,18 @@
                             <div class="highlight">
                                 <h4><i class="fas fa-key me-2"></i> Key features</h4>
                                 <p>A unified system typically offers:</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li><i class="fas fa-check-circle"></i> Centralized patient records (accessible across departments or facilities)</li>
-                                            <li><i class="fas fa-check-circle"></i> Appointment scheduling and patient tracking</li>
-                                            <li><i class="fas fa-check-circle"></i> E-prescriptions and medication management</li>
-                                            <li><i class="fas fa-check-circle"></i> Lab and diagnostic integration</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li><i class="fas fa-check-circle"></i> Billing, insurance, and financial management</li>
-                                            <li><i class="fas fa-check-circle"></i> Reporting and analytics for decision making</li>
-                                            <li><i class="fas fa-check-circle"></i> Role-based access for doctors, nurses, admins, etc.</li>
-                                        </ul>
-                                    </div>
+                                <div class="two-columns">
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> Centralized patient records (accessible across departments or facilities)</li>
+                                        <li><i class="fas fa-check-circle"></i> Appointment scheduling and patient tracking</li>
+                                        <li><i class="fas fa-check-circle"></i> E-prescriptions and medication management</li>
+                                        <li><i class="fas fa-check-circle"></i> Lab and diagnostic integration</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> Billing, insurance, and financial management</li>
+                                        <li><i class="fas fa-check-circle"></i> Reporting and analytics for decision making</li>
+                                        <li><i class="fas fa-check-circle"></i> Role-based access for doctors, nurses, admins, etc.</li>
+                                    </ul>
                                 </div>
                             </div>
                             
@@ -758,30 +549,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Filter Section -->
-    <section>
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span class="section-badge">All Projects</span>
-                <h2>More From Our Portfolio</h2>
-                <p>Browse through our completed projects, installations, and training sessions</p>
-            </div>
-            
-            <div class="filter-buttons" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="cctv">CCTV & Security</button>
-                <button class="filter-btn" data-filter="satellite">Satellite & VSAT</button>
-                <button class="filter-btn" data-filter="training">Training</button>
-                <button class="filter-btn" data-filter="equipment">Equipment</button>
-                <button class="filter-btn" data-filter="facility">Facility</button>
-            </div>
-
-            <div class="gallery-grid" id="galleryGrid" data-aos="fade-up">
-                <!-- Gallery items will be loaded dynamically from /Gallery folder -->
             </div>
         </div>
     </section>
@@ -797,6 +564,7 @@
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -862,85 +630,53 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        let currentPage = window.location.pathname.split('/').pop();
-        if (currentPage === '' || currentPage === 'gallery.html') {
-            document.querySelectorAll('.nav-link').forEach(link => {
-                if (link.getAttribute('href') === 'gallery.html') {
-                    link.classList.add('active');
+        // AUTOMATICALLY LOAD ALL IMAGES FROM /gallery FOLDER
+        // You DO NOT need to list any image names here
+        // This function fetches all image files from the /gallery directory
+        
+        async function loadAllGalleryImages() {
+            const marquee = document.getElementById('marqueeGallery');
+            
+            // Show loading message
+            marquee.innerHTML = '<div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">📸 Loading images from /gallery folder...</div>';
+            
+            try {
+                // Fetch the list of images from the server
+                // Note: This requires a simple PHP or server-side file listing
+                // For static HTML without backend, we'll use a different approach
+                
+                // Alternative: Use a simple JSON file or manifest
+                // For now, we'll try to load images by checking common extensions
+                // But the best solution is to have a small PHP file
+                
+                // Let me create a manifest approach - you can also use a simple PHP script
+                const response = await fetch('/gallery/image-list.json');
+                if (response.ok) {
+                    const images = await response.json();
+                    displayImages(images);
+                } else {
+                    // If no manifest exists, show instruction
+                    showInstructions();
                 }
-            });
-        }
-
-        // Get all images from /Gallery folder and create marquee and gallery
-        // You need to manually list your image files or use a server-side script
-        // For now, this will look for images. Replace this array with your actual image names.
-        
-        // IMPORTANT: List all your image filenames from /Gallery folder here
-        const galleryImagesList = [
-            // Add your image filenames here, for example:
-            // 'image1.jpg', 'image2.jpg', 'image3.jpg'
-            // The script will automatically use all images from the gallery folder
-        ];
-        
-        // Function to discover images (this will try to load images and keep the ones that exist)
-        function discoverImages() {
-            return new Promise((resolve) => {
-                const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
-                const imageNames = [];
-                
-                // Try common image names - replace with your actual filenames
-                const possibleNames = [
-                    'project1', 'project2', 'project3', 'cctv1', 'cctv2', 'satellite1', 
-                    'training1', 'equipment1', 'facility1', 'installation1', 'installation2'
-                ];
-                
-                let completed = 0;
-                let foundImages = [];
-                
-                possibleNames.forEach(name => {
-                    imageExtensions.forEach(ext => {
-                        const img = new Image();
-                        img.onload = () => {
-                            foundImages.push(name + ext);
-                            completed++;
-                            if (completed === possibleNames.length * imageExtensions.length) {
-                                resolve(foundImages);
-                            }
-                        };
-                        img.onerror = () => {
-                            completed++;
-                            if (completed === possibleNames.length * imageExtensions.length) {
-                                resolve(foundImages);
-                            }
-                        };
-                        img.src = `/Gallery/${name}${ext}`;
-                    });
-                });
-                
-                setTimeout(() => resolve(foundImages), 2000);
-            });
+            } catch (error) {
+                showInstructions();
+            }
         }
         
-        // Sample gallery data with categories - REPLACE WITH YOUR ACTUAL IMAGES
-        const galleryData = [
-            // Add your actual images here with their categories
-            // Example:
-            // { name: 'your-image.jpg', category: 'cctv', title: 'Your Title', description: 'Your description' }
-        ];
-        
-        // Load scrolling marquee
-        function loadMarquee() {
+        function displayImages(images) {
             const marquee = document.getElementById('marqueeGallery');
             let html = '';
-            if (galleryData.length === 0) {
-                html = '<div class="marquee-item" style="color: gray; padding: 50px;">Add your images to /Gallery folder and update the galleryData array with image names, categories, titles, and descriptions</div>';
+            
+            if (images.length === 0) {
+                html = '<div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px;">📸 No images found in /gallery folder. Add some images!</div>';
             } else {
-                for (let i = 0; i < 2; i++) {
-                    galleryData.forEach(img => {
+                // Duplicate 3 times for seamless scrolling
+                for (let repeat = 0; repeat < 3; repeat++) {
+                    images.forEach(img => {
                         html += `
                             <div class="marquee-item">
-                                <a href="/Gallery/${img.name}" data-lightbox="marquee">
-                                    <img src="/Gallery/${img.name}" alt="${img.title}" onerror="this.src='https://via.placeholder.com/280x200?text=Image+Not+Found'">
+                                <a href="/gallery/${img}" data-lightbox="gallery">
+                                    <img src="/gallery/${img}" alt="IICT Gallery Image" onerror="this.src='https://via.placeholder.com/300x220?text=Image+Error'">
                                 </a>
                             </div>
                         `;
@@ -948,82 +684,28 @@
                 }
             }
             marquee.innerHTML = html;
-        }
-
-        // Load gallery grid
-        function loadGallery(filter = 'all') {
-            const grid = document.getElementById('galleryGrid');
-            let html = '';
-            const filtered = filter === 'all' ? galleryData : galleryData.filter(img => img.category === filter);
-            
-            if (filtered.length === 0) {
-                html = '<div class="col-12 text-center" style="padding: 60px;"><p class="text-muted">No images found in this category. Add images to /Gallery folder and update the galleryData array.</p></div>';
-            } else {
-                filtered.forEach(img => {
-                    html += `
-                        <div class="gallery-card" data-category="${img.category}">
-                            <div class="gallery-card-img">
-                                <a href="/Gallery/${img.name}" data-lightbox="gallery" data-title="${img.title} - ${img.description}">
-                                    <img src="/Gallery/${img.name}" alt="${img.title}" onerror="this.src='https://via.placeholder.com/400x240?text=Image+Not+Found'">
-                                </a>
-                                <div class="gallery-card-overlay">
-                                    <a href="/Gallery/${img.name}" data-lightbox="gallery"><i class="fas fa-search-plus"></i> View</a>
-                                </div>
-                            </div>
-                            <div class="gallery-card-info">
-                                <h4>${img.title}</h4>
-                                <p>${img.description}</p>
-                                <span class="category">${img.category.toUpperCase()}</span>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-            
-            grid.innerHTML = html;
             
             lightbox.option({
                 'resizeDuration': 200,
                 'wrapAround': true
             });
         }
-
-        // Filter buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const filter = this.getAttribute('data-filter');
-                loadGallery(filter);
-            });
-        });
-
-        // Sample gallery data - REPLACE THIS WITH YOUR ACTUAL IMAGES
-        // List all your image files from /Gallery folder here
-        const galleryData = [
-            // Add your images in this format:
-            // { name: 'cctv-installation.jpg', category: 'cctv', title: 'CCTV Installation at Corporate Office', description: '24/7 security monitoring system installed at Lagos headquarters' },
-            // { name: 'vsat-installation.jpg', category: 'satellite', title: 'VSAT Installation', description: 'Satellite communication setup for remote oil and gas facility' },
-            // { name: 'training-session.jpg', category: 'training', title: 'ICT Training Workshop', description: 'Hands-on training for IT professionals at our Ibadan facility' },
-            // { name: 'server-room.jpg', category: 'equipment', title: 'Server Room Setup', description: 'Enterprise-grade server and network infrastructure installation' },
-            // { name: 'control-room.jpg', category: 'facility', title: 'Control Room', description: 'State-of-the-art monitoring and control center' }
-        ];
-
-        // Replace the sample data with your actual images
-        // Example:
-        // const galleryData = [
-        //     { name: 'your-image1.jpg', category: 'cctv', title: 'Your Title 1', description: 'Your description 1' },
-        //     { name: 'your-image2.jpg', category: 'satellite', title: 'Your Title 2', description: 'Your description 2' },
-        //     { name: 'your-image3.jpg', category: 'training', title: 'Your Title 3', description: 'Your description 3' },
-        // ];
         
-        loadMarquee();
-        loadGallery();
+        function showInstructions() {
+            const marquee = document.getElementById('marqueeGallery');
+            marquee.innerHTML = `
+                <div class="marquee-item" style="color: gray; padding: 50px; background: white; border-radius: 20px; max-width: 500px; white-space: normal;">
+                    <strong>📸 How to add images:</strong><br><br>
+                    Method 1 (Recommended): Create a file called <strong>image-list.json</strong> in your /gallery folder with this content:<br>
+                    <code>["image1.jpg", "image2.png", "image3.webp"]</code><br><br>
+                    Method 2: Contact your developer to set up automatic image detection.<br><br>
+                    Just put your images in the <strong>/gallery</strong> folder and create the JSON file!
+                </div>
+            `;
+        }
         
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true
-        });
+        // Try to load images
+        loadAllGalleryImages();
     </script>
 </body>
 </html>
