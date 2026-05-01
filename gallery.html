@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IICT - Gallery | Our Work & Projects</title>
+    <meta name="description" content="Explore IICT's gallery of completed projects, equipment, installations, and training sessions across Nigeria.">
+    <meta name="keywords" content="IICT gallery, IT projects Nigeria, CCTV installation, satellite installation, ICT training photos">
+    
+    <link rel="icon" type="image/jpeg" href="/Images/logo.jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-glow: rgba(37, 99, 235, 0.2);
+            --secondary: #0f172a;
+            --secondary-light: #1e293b;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --gradient-glow: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --shadow-primary: 0 10px 30px rgba(37, 99, 235, 0.2);
+            --border-radius-sm: 12px;
+            --border-radius-md: 20px;
+            --border-radius-lg: 30px;
+            --border-radius-xl: 50px;
+            --transition-fast: 0.2s ease;
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            background-color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 600;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--secondary);
+            margin: 0 0.25rem;
+            transition: all var(--transition-base);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+            padding: 180px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 60%;
+            height: 120%;
+            background: var(--gradient-glow);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--primary-dark);
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            color: var(--primary);
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius-xl);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .marquee-container {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+            padding: 40px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-container::before,
+        .marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(90deg, #f0f9ff, transparent);
+        }
+
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(-90deg, #e0e7ff, transparent);
+        }
+
+        .marquee {
+            display: inline-block;
+            animation: scroll 40s linear infinite;
+            white-space: nowrap;
+        }
+
+        .marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            display: inline-block;
+            margin: 0 15px;
+            transition: all var(--transition-base);
+        }
+
+        .marquee-item img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+
+        .marquee-item img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .featured-section {
+            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+        }
+
+        .featured-card {
+            background: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-base);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .featured-card-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .featured-card-content {
+            padding: 2rem;
+        }
+
+        .featured-card-content h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .featured-card-content .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .featured-card-content p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .featured-card-content .highlight {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            margin: 1rem 0;
+        }
+
+        .featured-card-content .highlight h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-card-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .featured-card-content ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .featured-card-content ul li i {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: var(--light);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--gray);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-card-img {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-card-img img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-card:hover .gallery-card-img img {
+            transform: scale(1.08);
+        }
+
+        .gallery-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+            text-align: center;
+        }
+
+        .gallery-card:hover .gallery-card-overlay {
+            opacity: 1;
+        }
+
+        .gallery-card-overlay a {
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        .gallery-card-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-card-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-card-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-card-info .category {
+            display: inline-block;
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .footer {
+            background: var(--secondary);
+            color: var(--gray-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer h5 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: all var(--transition-base);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            z-index: 1000;
+            box-shadow: var(--shadow-primary);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+            
+            .page-header {
+                padding: 140px 0 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+
+            .marquee-item img {
+                width: 200px;
+                height: 150px;
+            }
+
+            .featured-card-img {
+                height: 250px;
+            }
+
+            .featured-card-content h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <img src="/Images/logo.jpeg" alt="IICT Logo" class="logo-img">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary-custom">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1>Our Gallery</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrolling Marquee Gallery - All images from /Gallery folder -->
+    <div class="marquee-container">
+        <div class="marquee" id="marqueeGallery">
+            <!-- Images will be loaded dynamically from /Gallery folder -->
+        </div>
+    </div>
+
+    <!-- Featured Section with Electronic Medical Records System -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="section-badge">Featured Project</span>
+                <h2>Our Flagship Solution</h2>
+                <p>Developed by IICT - Innovation at its finest</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <div class="featured-card">
+                        <img src="/Images/App.jpg" alt="Electronic Medical Records System" class="featured-card-img" onerror="this.src='https://via.placeholder.com/1200x400?text=IICT+EMR+System'">
+                        <div class="featured-card-content">
+                            <h3>Unified Electronic Medical Records & Health Management System</h3>
+                            <div class="subtitle">Developed by IICT</div>
+                            <p>A unified electronic medical records and health management system is an integrated digital platform that combines patient medical records with tools for managing healthcare services all in one place.</p>
+                            <p>Instead of having separate systems for patient files, appointments, billing, lab results, and hospital operations, a unified system brings everything together so healthcare providers can access and manage information seamlessly.</p>
+                            
+                            <div class="highlight">
+                                <h4><i class="fas fa-microchip me-2"></i> What it includes</h4>
+                                <p>At its core, it merges two major components:</p>
+                                <ul>
+                                    <li><i class="fas fa-file-medical"></i> <strong>Electronic Medical Records (EMR):</strong> Digital versions of patients' clinical data—diagnoses, prescriptions, lab results, medical history, imaging, etc.</li>
+                                    <li><i class="fas fa-hospital-user"></i> <strong>Health Management System (HMS):</strong> Administrative and operational tools for appointments, billing, staff management, pharmacy, inventory, reporting.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="highlight">
+                                <h4><i class="fas fa-key me-2"></i> Key features</h4>
+                                <p>A unified system typically offers:</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Centralized patient records (accessible across departments or facilities)</li>
+                                            <li><i class="fas fa-check-circle"></i> Appointment scheduling and patient tracking</li>
+                                            <li><i class="fas fa-check-circle"></i> E-prescriptions and medication management</li>
+                                            <li><i class="fas fa-check-circle"></i> Lab and diagnostic integration</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Billing, insurance, and financial management</li>
+                                            <li><i class="fas fa-check-circle"></i> Reporting and analytics for decision making</li>
+                                            <li><i class="fas fa-check-circle"></i> Role-based access for doctors, nurses, admins, etc.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-primary-custom">Request a Demo <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section>
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="section-badge">All Projects</span>
+                <h2>More From Our Portfolio</h2>
+                <p>Browse through our completed projects, installations, and training sessions</p>
+            </div>
+            
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cctv">CCTV & Security</button>
+                <button class="filter-btn" data-filter="satellite">Satellite & VSAT</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="equipment">Equipment</button>
+                <button class="filter-btn" data-filter="facility">Facility</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid" data-aos="fade-up">
+                <!-- Gallery items will be loaded dynamically from /Gallery folder -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">
+                        <img src="/Images/logo.jpeg" alt="IICT Logo" style="height: 35px;">
+                    </h5>
+                    <p>Leading provider of innovative IT solutions, satellite communications, and professional ICT training across Nigeria.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Our Services</h5>
+                    <a href="services.html">Satellite Communications</a>
+                    <a href="services.html">VPN & WAN Solutions</a>
+                    <a href="services.html">Microwave & RF Links</a>
+                    <a href="services.html">CCTV & Security Systems</a>
+                    <a href="services.html">Biometric Access Control</a>
+                    <a href="services.html">ICT Training</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> IICT Suite, University College Hospital, Queen Elizabeth Drive, Ibadan, Nigeria</p>
+                    <p><i class="fas fa-phone me-2"></i> +234 803 361 2288, +234 706 536 0711, +234 703 629 8394, +234 805 746 8141</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@iict-ng.com, ceo@iict-ng.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="mb-0">© 2026 IICT. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const backBtn = document.getElementById('backToTop');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backBtn.classList.add('show');
+            } else {
+                navbar.classList.remove('scrolled');
+                backBtn.classList.remove('show');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        let currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === '' || currentPage === 'gallery.html') {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'gallery.html') {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Get all images from /Gallery folder and create marquee and gallery
+        // You need to manually list your image files or use a server-side script
+        // For now, this will look for images. Replace this array with your actual image names.
+        
+        // IMPORTANT: List all your image filenames from /Gallery folder here
+        const galleryImagesList = [
+            // Add your image filenames here, for example:
+            // 'image1.jpg', 'image2.jpg', 'image3.jpg'
+            // The script will automatically use all images from the gallery folder
+        ];
+        
+        // Function to discover images (this will try to load images and keep the ones that exist)
+        function discoverImages() {
+            return new Promise((resolve) => {
+                const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
+                const imageNames = [];
+                
+                // Try common image names - replace with your actual filenames
+                const possibleNames = [
+                    'project1', 'project2', 'project3', 'cctv1', 'cctv2', 'satellite1', 
+                    'training1', 'equipment1', 'facility1', 'installation1', 'installation2'
+                ];
+                
+                let completed = 0;
+                let foundImages = [];
+                
+                possibleNames.forEach(name => {
+                    imageExtensions.forEach(ext => {
+                        const img = new Image();
+                        img.onload = () => {
+                            foundImages.push(name + ext);
+                            completed++;
+                            if (completed === possibleNames.length * imageExtensions.length) {
+                                resolve(foundImages);
+                            }
+                        };
+                        img.onerror = () => {
+                            completed++;
+                            if (completed === possibleNames.length * imageExtensions.length) {
+                                resolve(foundImages);
+                            }
+                        };
+                        img.src = `/Gallery/${name}${ext}`;
+                    });
+                });
+                
+                setTimeout(() => resolve(foundImages), 2000);
+            });
+        }
+        
+        // Sample gallery data with categories - REPLACE WITH YOUR ACTUAL IMAGES
+        const galleryData = [
+            // Add your actual images here with their categories
+            // Example:
+            // { name: 'your-image.jpg', category: 'cctv', title: 'Your Title', description: 'Your description' }
+        ];
+        
+        // Load scrolling marquee
+        function loadMarquee() {
+            const marquee = document.getElementById('marqueeGallery');
+            let html = '';
+            if (galleryData.length === 0) {
+                html = '<div class="marquee-item" style="color: gray; padding: 50px;">Add your images to /Gallery folder and update the galleryData array with image names, categories, titles, and descriptions</div>';
+            } else {
+                for (let i = 0; i < 2; i++) {
+                    galleryData.forEach(img => {
+                        html += `
+                            <div class="marquee-item">
+                                <a href="/Gallery/${img.name}" data-lightbox="marquee">
+                                    <img src="/Gallery/${img.name}" alt="${img.title}" onerror="this.src='https://via.placeholder.com/280x200?text=Image+Not+Found'">
+                                </a>
+                            </div>
+                        `;
+                    });
+                }
+            }
+            marquee.innerHTML = html;
+        }
+
+        // Load gallery grid
+        function loadGallery(filter = 'all') {
+            const grid = document.getElementById('galleryGrid');
+            let html = '';
+            const filtered = filter === 'all' ? galleryData : galleryData.filter(img => img.category === filter);
+            
+            if (filtered.length === 0) {
+                html = '<div class="col-12 text-center" style="padding: 60px;"><p class="text-muted">No images found in this category. Add images to /Gallery folder and update the galleryData array.</p></div>';
+            } else {
+                filtered.forEach(img => {
+                    html += `
+                        <div class="gallery-card" data-category="${img.category}">
+                            <div class="gallery-card-img">
+                                <a href="/Gallery/${img.name}" data-lightbox="gallery" data-title="${img.title} - ${img.description}">
+                                    <img src="/Gallery/${img.name}" alt="${img.title}" onerror="this.src='https://via.placeholder.com/400x240?text=Image+Not+Found'">
+                                </a>
+                                <div class="gallery-card-overlay">
+                                    <a href="/Gallery/${img.name}" data-lightbox="gallery"><i class="fas fa-search-plus"></i> View</a>
+                                </div>
+                            </div>
+                            <div class="gallery-card-info">
+                                <h4>${img.title}</h4>
+                                <p>${img.description}</p>
+                                <span class="category">${img.category.toUpperCase()}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            grid.innerHTML = html;
+            
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.getAttribute('data-filter');
+                loadGallery(filter);
+            });
+        });
+
+        // Sample gallery data - REPLACE THIS WITH YOUR ACTUAL IMAGES
+        // List all your image files from /Gallery folder here
+        const galleryData = [
+            // Add your images in this format:
+            // { name: 'cctv-installation.jpg', category: 'cctv', title: 'CCTV Installation at Corporate Office', description: '24/7 security monitoring system installed at Lagos headquarters' },
+            // { name: 'vsat-installation.jpg', category: 'satellite', title: 'VSAT Installation', description: 'Satellite communication setup for remote oil and gas facility' },
+            // { name: 'training-session.jpg', category: 'training', title: 'ICT Training Workshop', description: 'Hands-on training for IT professionals at our Ibadan facility' },
+            // { name: 'server-room.jpg', category: 'equipment', title: 'Server Room Setup', description: 'Enterprise-grade server and network infrastructure installation' },
+            // { name: 'control-room.jpg', category: 'facility', title: 'Control Room', description: 'State-of-the-art monitoring and control center' }
+        ];
+
+        // Replace the sample data with your actual images
+        // Example:
+        // const galleryData = [
+        //     { name: 'your-image1.jpg', category: 'cctv', title: 'Your Title 1', description: 'Your description 1' },
+        //     { name: 'your-image2.jpg', category: 'satellite', title: 'Your Title 2', description: 'Your description 2' },
+        //     { name: 'your-image3.jpg', category: 'training', title: 'Your Title 3', description: 'Your description 3' },
+        // ];
+        
+        loadMarquee();
+        loadGallery();
+        
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    </script>
+</body>
+</html>
