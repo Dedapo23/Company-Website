@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$galleryPath = 'gallery/';
+$galleryPath = '/gallery/';
 $images = [];
 
 if (is_dir($galleryPath)) {
