@@ -7,8 +7,7 @@
     <meta name="description" content="Explore IICT's comprehensive IT services including Satellite Communications, VPN/WAN, Microwave Links, CCTV Security, Biometric Access Control, and professional ICT training.">
     <meta name="keywords" content="IT services Nigeria, satellite communications, VSAT, network security, CCTV, biometric access control, ICT training">
     
-    <!-- Favicon -->
-   <link rel="icon" type="image/jpeg" href="/Images/logo.jpeg">
+    <link rel="icon" type="image/jpeg" href="/Images/logo.jpeg">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     
@@ -156,16 +155,6 @@
             background: rgba(255, 255, 255, 0.98);
         }
 
-        .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
-        }
-
         .nav-link {
             font-weight: 500;
             color: var(--secondary);
@@ -281,6 +270,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
+            cursor: pointer;
         }
 
         .service-card::before {
@@ -384,6 +374,45 @@
             background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
         }
 
+        .service-category {
+            background: var(--white);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            background: var(--light);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--secondary);
+            transition: all var(--transition-base);
+        }
+
+        .service-list li:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            cursor: pointer;
+        }
+
         .footer {
             background: var(--secondary);
             color: var(--gray-light);
@@ -467,6 +496,13 @@
             transform: translateY(-5px) scale(1.1);
         }
 
+        .logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
         @media (max-width: 768px) {
             section {
                 padding: 60px 0;
@@ -487,15 +523,7 @@
             .section-title h2 {
                 font-size: 1.8rem;
             }
-        }
-         .logo-img {
-            height: 48px;
-            width: auto;
-            max-width: 180px;
-            object-fit: contain;
-        }
 
-        @media (max-width: 768px) {
             .logo-img {
                 height: 40px;
             }
@@ -506,7 +534,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
-           <img src="/Images/logo.jpeg" alt="IICT Logo" class="logo-img"></a>
+            <img src="/Images/logo.jpeg" alt="IICT Logo" class="logo-img">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -538,8 +566,164 @@
         </div>
     </div>
 
-    <!-- Building Image Showcase -->
+    <!-- Satellite, WiFi & Radio Frequency Section with Starlink Image -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="image-showcase">
+                        <img src="/Images/Starlink.jpg" alt="Satellite Communications - Starlink & RF Solutions" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="section-badge">Connectivity Solutions</span>
+                    <h2>Satellite, WiFi & Radio Frequency Communications</h2>
+                    <p class="text-muted mb-3">IICT delivers comprehensive connectivity solutions that keep your business connected, no matter where you are in Nigeria. Our suite of communication services ensures reliable, high-speed connectivity for urban centers and remote locations alike.</p>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-primary mb-2"><i class="fas fa-satellite-dish me-2"></i> Satellite Communications</h5>
+                        <p class="text-muted">Leading suppliers of 70/140 MHz C-and Ku-Band RF transceivers, L-Band if C- and Ku-Band Block up Converters (BUC) and high power solid State Power Amplifiers (SSPA). Perfect for oil & gas, banking, and enterprise communications.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-wifi me-2"></i> Wireless Community (WiiComm)</h5>
+                        <p class="text-muted">Centralized internet connectivity for enclosed communities like estates, residential areas, and organizational premises. We blueprint Internet connectivity by centralized integration of respective living areas.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-radio me-2"></i> Radio Frequency Communication</h5>
+                        <p class="text-muted">Complete communications solutions including voice, fax, email, telephone interconnect, GPS tracking, and data services for modern business requirements.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-tower-cell me-2"></i> Microwave & RF Links</h5>
+                        <p class="text-muted">Deployment of Narrowband Digital Microwave Radios for short, medium and long haul terrestrial links with full Network Management capabilities.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-network-wired me-2"></i> VPN & Wide Area Networks (WAN)</h5>
+                        <p class="text-muted">Seamless interconnection between headquarters and branch offices using scalable VSAT (1.2, 1.8, 2.4, 3.8 metre) equipment, microwave & RF deployments.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-satellite me-2"></i> Tri-Fold Scalable VSAT Antenna</h5>
+                        <p class="text-muted">Ideal for organizations with field operations (construction firms, geological research, mobile projects). Ensures real-time data and communication between remote sites and headquarters.</p>
+                    </div>
+                    
+                    <div class="service-category" style="background: transparent; padding: 0; box-shadow: none;">
+                        <ul class="service-list">
+                            <li onclick="window.location.href='contact.html'"><i class="fas fa-satellite-dish me-2"></i> Satellite Communications</li>
+                            <li onclick="window.location.href='contact.html'"><i class="fas fa-wifi me-2"></i> Wireless Community (WiiComm)</li>
+                            <li onclick="window.location.href='contact.html'"><i class="fas fa-radio me-2"></i> Radio Frequency Communication</li>
+                            <li onclick="window.location.href='contact.html'"><i class="fas fa-tower-cell me-2"></i> Microwave & RF Links</li>
+                            <li onclick="window.location.href='contact.html'"><i class="fas fa-network-wired me-2"></i> VPN & WAN</li>
+                            <li onclick="window.location.href='contact.html'"><i class="fas fa-satellite me-2"></i> Tri-Fold VSAT Antenna</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary-custom mt-3">Get Connected <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CCTV Section -->
     <section>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <div class="image-showcase">
+                        <img src="/Images/Cctv(service).jpg" alt="CCTV Security Surveillance Systems" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                    <span class="section-badge">Security Solutions</span>
+                    <h2>CCTV & Security Surveillance Systems</h2>
+                    <p class="text-muted mb-3">Protect what matters most with IICT's advanced security surveillance solutions. Whether for your home, office, or industrial facility, we provide cutting-edge CCTV systems that give you complete visibility and peace of mind.</p>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-primary mb-2"><i class="fas fa-video me-2"></i> Advanced CCTV Systems</h5>
+                        <p class="text-muted">IICT provides advanced analogue, hybrid, and IP-based CCTV systems with high-definition video recording (1080p, 4K) and remote monitoring capabilities. Access your cameras from anywhere in the world via mobile app or web browser.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-cloud-upload-alt me-2"></i> Cloud-Ready DVR/NVR Storage</h5>
+                        <p class="text-muted">Secure cloud storage options with motion-triggered recording, ensuring you never miss important events. Local storage with large HDD capacity also available.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-bell me-2"></i> Motion Detection & Alarm Integration</h5>
+                        <p class="text-muted">Smart motion detection with instant alerts sent to your phone. Integration with existing alarm systems for comprehensive security coverage.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-mobile-alt me-2"></i> Remote Monitoring & Control</h5>
+                        <p class="text-muted">View live feeds and recorded footage from any smartphone, tablet, or computer. Pan, tilt, zoom functionality on PTZ cameras for complete coverage.</p>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary-custom mt-3">Request a Quote <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biometric & Access Control Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="image-showcase">
+                        <img src="/Images/Accesscontrol.jpg" alt="Biometric Authentication & Access Control" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="section-badge">Access Control</span>
+                    <h2>Biometric Authentication & Access Control Systems</h2>
+                    <p class="text-muted mb-3">Say goodbye to lost keys and forgotten passwords. IICT's biometric solutions provide unparalleled security and convenience for homes, offices, and institutions.</p>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-primary mb-2"><i class="fas fa-fingerprint me-2"></i> Fingerprint Recognition</h5>
+                        <p class="text-muted">High-precision fingerprint scanners with fast recognition (less than 1 second). Stores thousands of fingerprints with anti-spoofing technology.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-face-smile me-2"></i> Facial Recognition</h5>
+                        <p class="text-muted">Contactless access control using advanced facial recognition. Works in various lighting conditions with mask detection capabilities.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-eye me-2"></i> Iris Recognition</h5>
+                        <p class="text-muted">Highest level of biometric security using unique iris patterns. Ideal for high-security areas like data centers, laboratories, and government facilities.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-door-open me-2"></i> Keyless Entry Systems</h5>
+                        <p class="text-muted">Complete door access control with audit trails, time scheduling, and remote management. Integration with existing door hardware.</p>
+                    </div>
+                    
+                    <p class="text-muted mt-3"><strong>Why choose IICT biometric systems?</strong> Our solutions eliminate the need for keys, cards, or passwords — your fingerprint becomes your key. With advanced authentication and encrypted data management, we guarantee unmatched safety, privacy, and ease of access.</p>
+                    
+                    <a href="contact.html" class="btn btn-primary-custom mt-3">Secure Your Facility <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ICT Training Section -->
+    <section>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <div class="image-showcase">
+                        <img src="/Images/training.jpg" alt="Professional ICT Training" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                    <span class="section-badge">Training & Development</span>
+                    <h2>Professional ICT Training & Capacity Building</h2>
+                    <p class="text-muted mb-3">Empower yourself and your team with in-demand technology skills. IICT offers result-oriented training programs that equip participants with practical, hands-on experience relevant to today's technology-driven world.</p>
+                    
+                    <div class="mb-4">
+                        <h5 class="text-primary mb-2"><i class="fas fa-laptop-code me-2"></i> Network Administration</h5>
+                        <p class="text-muted">CCNA, Network+, and advanced networking courses. Learn to configure, manage, and troubleshoot enterprise networks.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-shield-alt me-2"></i> Cybersecurity Training</h5>
+                        <p class="text-muted">Protect organizations from cyber threats. Courses cover ethical hacking, security analysis, and incident response.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-database me-2"></i> Data Management & Analytics</h5>
+                        <p class="text-muted">SQL, database administration, business intelligence, and data visualization skills for the modern workplace.</p>
+                        
+                        <h5 class="text-primary mb-2 mt-3"><i class="fas fa-chalkboard-user me-2"></i> Hands-on Workshops</h5>
+                        <p class="text-muted">Customized corporate training and public workshops with practical lab sessions. Certificate of completion provided.</p>
+                    </div>
+                    
+                    <p class="text-muted mt-3">Over the years, IICT has trained hundreds of professionals through workshops, classroom sessions, and tailored programs. We are dedicated to equipping people with the knowledge and skills to excel in the ICT field.</p>
+                    
+                    <a href="contact.html" class="btn btn-primary-custom mt-3">Enroll Now <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Image Showcase -->
+    <section class="gallery-section">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
@@ -556,13 +740,14 @@
                         <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Expert Technical Team</li>
                         <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> 24/7 Support Center</li>
                     </ul>
+                    <a href="contact.html" class="btn btn-outline-custom mt-3">Visit Us <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Mixer Equipment Showcase -->
-    <section class="gallery-section">
+    <section>
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <span class="section-badge">Our Equipment</span>
@@ -576,7 +761,8 @@
                     </div>
                     <div class="mt-3 text-center">
                         <h5>Professional High Quality Visual/Audio Mixing Console</h5>
-                        <p class="text-muted">High-quality Visual/audio equipment for clear communication</p>
+                        <p class="text-muted">High-quality visual/audio equipment for clear communication</p>
+                        <a href="contact.html" class="btn btn-outline-custom">Learn More</a>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
@@ -586,108 +772,7 @@
                     <div class="mt-3 text-center">
                         <h5>Digital Signal Processing Unit</h5>
                         <p class="text-muted">Advanced audio and visual processing for professional applications</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Building and CCTV Showcase -->
-<section class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="container text-center">
-        <div class="image-showcase">
-            <img src="/Images/inicotv.jpg" alt="CCTV Security System" class="img-fluid">
-        </div>
-    </div>
-</section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span class="section-badge">What We Offer</span>
-                <h2>Comprehensive IT Solutions</h2>
-                <p>We deliver cutting-edge technology services tailored to your business needs</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
-                        <h4>Satellite Communications</h4>
-                        <p>Leading suppliers of 70/140 MHz C-and Ku-Band RF transceivers, L-Band if C- and Ku- Band Block up Converters (BUC) and high power solid State Power Amplifiers (SSPA).</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-                        <h4>VPN & Wide Area Networks (WAN)</h4>
-                        <p>With the aid of scalable or terrestrial VSAT (1.2, 1.8, 2.4, 3.8Metre) equipments, microwave & RF deployments, we can seamlessly inter-connect HQs with other Branch offices.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-tower-cell"></i></div>
-                        <h4>Microwave & Radio Freq. (RF) Links</h4>
-                        <p>We deploy Narrowband Digital Microwave Radios for short, medium and long haul terrestrial links Full network Management capabilities.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-wifi"></i></div>
-                        <h4>Wireless Community (WiiComm)</h4>
-                        <p>With this infrastructural layout, we blue-print Internet connectivity for enclosed communities (e.g. Estates or Organizations' Official Residencies) by centralized integration of respective living areas.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-radio"></i></div>
-                        <h4>Radio Frequency Communication</h4>
-                        <p>A wide range of Communications solutions to cover all modern requirements, including voice, fax, email, telephone, interconnect GPS tracking, and data.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-satellite"></i></div>
-                        <h4>Tri-Fold Scalable VSAT Antenna</h4>
-                        <p>For organizations with field operations, IICT's Tri-Fold Scalable VSAT solutions ensure real-time data and communication between remote sites and headquarters.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-video"></i></div>
-                        <h4>CCTV & Security Surveillance Systems</h4>
-                        <p>IICT provides advanced analogue, hybrid, and IP-based CCTV systems with high-definition video recording and remote monitoring capabilities. Our solutions support motion detection, alarm integration, and cloud-ready DVR storage.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-fingerprint"></i></div>
-                        <h4>Biometric Authentication & Access Control</h4>
-                        <p>Our biometric solutions bring security and convenience together through fingerprint, facial, and iris recognition technologies. IICT's access control systems eliminate the need for keys or cards.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
-                        <h4>Professional ICT Training</h4>
-                        <p>IICT offers result-oriented training programs that equip participants with practical, hands-on experience relevant to today's technology-driven world.</p>
-                        <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <a href="contact.html" class="btn btn-outline-custom">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -708,6 +793,7 @@
                         <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> Backup & Disaster Recovery</li>
                         <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fas fa-check-circle text-primary"></i> 24/7 Monitoring & Maintenance</li>
                     </ul>
+                    <a href="contact.html" class="btn btn-primary-custom mt-3">Get A Quote <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="image-showcase">
@@ -722,9 +808,9 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-<h5 class="mb-4">
-  <img src="/Images/logo.jpeg" alt="IICT Logo" style="height: 30px;">
-</h5>
+                    <h5 class="mb-4">
+                        <img src="/Images/logo.jpeg" alt="IICT Logo" style="height: 35px;">
+                    </h5>
                     <p>Leading provider of innovative IT solutions, satellite communications, and professional ICT training across Nigeria.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -746,6 +832,8 @@
                     <a href="services.html">VPN & WAN Solutions</a>
                     <a href="services.html">Microwave & RF Links</a>
                     <a href="services.html">CCTV & Security Systems</a>
+                    <a href="services.html">Biometric Access Control</a>
+                    <a href="services.html">ICT Training</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Contact Info</h5>
